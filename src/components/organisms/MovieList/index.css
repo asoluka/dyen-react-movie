@@ -1,0 +1,17 @@
+.movie {
+  display: flex;
+  align-items: center;
+}
+
+.img-container {
+  width: 10%;
+}
+
+img {
+  width: 100%;
+}
+
+.title {
+  font-size: 0.6rem;
+  margin-left: 8px;
+}
