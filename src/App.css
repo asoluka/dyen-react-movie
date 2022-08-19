@@ -102,6 +102,10 @@ body {
   background-position: center;
 }
 
+[class*="bg-"] {
+  min-height: 300px;
+}
+
 .bg-1 {
   background-image: url("https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_960_720.jpg");
 }
@@ -112,6 +116,18 @@ body {
 
 .bg-3 {
   background-image: url("https://cdn.pixabay.com/photo/2016/08/26/15/06/home-1622401_960_720.jpg");
+}
+
+.bg-4 {
+  background-image: url("https://cdn.pixabay.com/photo/2022/07/15/20/13/strawberries-7323943_1280.jpg");
+}
+
+.bg-5 {
+  background-image: url("https://cdn.pixabay.com/photo/2022/08/01/10/36/tulips-7357877_960_720.jpg");
+}
+
+.bg-6 {
+  background-image: url("https://cdn.pixabay.com/photo/2022/07/23/10/48/daisies-7339735_960_720.jpg");
 }
 
 .mr-2 {
