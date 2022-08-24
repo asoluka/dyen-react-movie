@@ -1,26 +1,34 @@
 import React, { useState } from "react";
 import { NavBar } from "../../molecules";
-import { Gallery } from "../../organisms/Gallery";
-import { HeroSection } from "../../organisms/HeroSection";
 import { PageTemplate } from "../../templates/PageTemplate";
 
 export const HomePage = () => {
-  const [images, setImages] = useState([
-    <div className="bg-1"></div>,
-    <div className="bg-2"></div>,
-    <div className="bg-3"></div>,
-  ]);
+  const [input, setInput] = useState({
+    firstName: "",
+    lastName: "",
+  });
+
+  const handleInput = (e) => {
+    setInput((prev) => {
+      return { ...prev, [e.target.name]: e.target.value };
+    });
+  };
+
+  const handleSubmit = () => {
+    console.log(input);
+  };
 
   return (
     <PageTemplate header={<NavBar />}>
-      <HeroSection />
-
-      <Gallery
-        title="Our Last Projects"
-        images={images}
-        next={setImages}
-        prev={setImages}
-      />
+      <>
+        <input
+          onChange={handleInput}
+          name="firstName"
+          value={input.firstName}
+        />
+        <input onChange={handleInput} name="lastName" value={input.lastName} />
+        <button onClick={handleSubmit}>Submit</button>
+      </>
     </PageTemplate>
   );
 };
